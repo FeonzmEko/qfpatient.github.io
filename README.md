@@ -1,4 +1,4 @@
-# patient's blog :link: https://qfpatient.github.io 
+# patient's blog :link: patient.qzz.io 
 ### :page_facing_up: [3](https://qfpatient.github.io/tag.html) 
 ### :speech_balloon: 0 
 ### :hibiscus: 95 
