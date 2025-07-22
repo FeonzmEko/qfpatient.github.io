@@ -29,6 +29,26 @@ def real_sqrt(x) :
     return if_(x >= 0,sqrt(x),0)
 
 real_sqrt(-4)
+```
+* 断言`assert`
+```python
+from math import pi
+
+def area_circle(r):
+    assert r > 0,'A lengath must be positive'
+    return pi*r*r
+
+area_circle(-1)
+```
+会出现以下报错
+```shell
+Traceback (most recent call last):
+  File 'd:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py', line 20, in <module>
+    area_circle(-1)
+  File 'd:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py', line 17, in area_circle
+    assert r > 0,'A lengath must be positive'
+           ^^^^^
+AssertionError: A lengath must be positive
 ```。">
 <meta property="og:title" content="cs61a learning">
 <meta property="og:description" content="# cs61a 2020 fall
@@ -50,6 +70,26 @@ def real_sqrt(x) :
     return if_(x >= 0,sqrt(x),0)
 
 real_sqrt(-4)
+```
+* 断言`assert`
+```python
+from math import pi
+
+def area_circle(r):
+    assert r > 0,'A lengath must be positive'
+    return pi*r*r
+
+area_circle(-1)
+```
+会出现以下报错
+```shell
+Traceback (most recent call last):
+  File 'd:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py', line 20, in <module>
+    area_circle(-1)
+  File 'd:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py', line 17, in area_circle
+    assert r > 0,'A lengath must be positive'
+           ^^^^^
+AssertionError: A lengath must be positive
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qfpatient.github.io/post/cs61a%20learning.html">
@@ -141,7 +181,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">def</span> <span class="pl-en">real_sqrt</span>(<span class="pl-s1">x</span>) :
     <span class="pl-k">return</span> <span class="pl-en">if_</span>(<span class="pl-s1">x</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">0</span>,<span class="pl-en">sqrt</span>(<span class="pl-s1">x</span>),<span class="pl-c1">0</span>)
 
-<span class="pl-en">real_sqrt</span>(<span class="pl-c1">-</span><span class="pl-c1">4</span>)</pre></div></div>
+<span class="pl-en">real_sqrt</span>(<span class="pl-c1">-</span><span class="pl-c1">4</span>)</pre></div>
+<ul>
+<li>断言<code class="notranslate">assert</code></li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">math</span> <span class="pl-k">import</span> <span class="pl-s1">pi</span>
+
+<span class="pl-k">def</span> <span class="pl-en">area_circle</span>(<span class="pl-s1">r</span>):
+    <span class="pl-k">assert</span> <span class="pl-s1">r</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0</span>,<span class="pl-s">'A lengath must be positive'</span>
+    <span class="pl-k">return</span> <span class="pl-s1">pi</span><span class="pl-c1">*</span><span class="pl-s1">r</span><span class="pl-c1">*</span><span class="pl-s1">r</span>
+
+<span class="pl-en">area_circle</span>(<span class="pl-c1">-</span><span class="pl-c1">1</span>)</pre></div>
+<p>会出现以下报错</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">Traceback (most recent call last):
+  File <span class="pl-s"><span class="pl-pds">"</span>d:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py<span class="pl-pds">"</span></span>, line 20, <span class="pl-k">in</span> <span class="pl-k">&lt;</span>module<span class="pl-k">&gt;</span>
+    area_circle(-1)
+  File <span class="pl-s"><span class="pl-pds">"</span>d:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py<span class="pl-pds">"</span></span>, line 17, <span class="pl-k">in</span> area_circle
+    assert r <span class="pl-k">&gt;</span> 0,<span class="pl-s"><span class="pl-pds">'</span>A lengath must be positive<span class="pl-pds">'</span></span>
+           ^^^^^
+AssertionError: A lengath must be positive</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
