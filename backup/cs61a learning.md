@@ -18,7 +18,7 @@ def real_sqrt(x) :
 
 real_sqrt(-4)
 ```
-* 断言`assert`
+* 断言`assert`,其实就是偷懒版的`if`语句
 ```python
 from math import pi
 
