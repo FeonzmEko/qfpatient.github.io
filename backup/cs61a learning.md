@@ -18,26 +18,6 @@ def real_sqrt(x) :
 
 real_sqrt(-4)
 ```
-* 断言`assert`,其实就是偷懒版的`if`语句
-```python
-from math import pi
-
-def area_circle(r):
-    assert r > 0,'A lengath must be positive'
-    return pi*r*r
-
-area_circle(-1)
-```
-会出现以下报错
-```shell
-Traceback (most recent call last):
-  File "d:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py", line 20, in <module>
-    area_circle(-1)
-  File "d:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py", line 17, in area_circle
-    assert r > 0,'A lengath must be positive'
-           ^^^^^
-AssertionError: A lengath must be positive
-```
 * 使用高阶函数来实现重复的逻辑，减少代码冗余，类似于`c++`中的模板
 ```python
 def identity(k):
@@ -75,4 +55,17 @@ def sum_cubes(n):
 
 print(sum_naturals(5))
 print(sum_cubes(5))
+```
+* 返回值为函数的高阶函数,下面的例子构造了一个`+3`的加法器
+```python
+def  make_adder(n) :
+    """
+    >>> add_three = make_three(3)
+    >>> add_three(4)
+    7
+    """
+
+    def adder(k) :
+        return k+n
+    return adder
 ```
