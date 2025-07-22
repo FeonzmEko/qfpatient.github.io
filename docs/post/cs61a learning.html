@@ -49,6 +49,44 @@ Traceback (most recent call last):
     assert r > 0,'A lengath must be positive'
            ^^^^^
 AssertionError: A lengath must be positive
+```
+* 使用高阶函数来实现重复的逻辑，减少代码冗余，类似于`c++`中的模板
+```python
+def identity(k):
+    return k
+
+def cube(k):
+    return pow(k,3)
+
+def summation(n,term):
+    '''Sum the first N terms of a sequence
+    
+    >>> summation(5,cube)
+    225
+    '''
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + term(k), k + 1
+    return total
+
+def sum_naturals(n):
+    '''Sum of the first N natural numbers.
+
+    >>> sum_naturals(5)
+    15
+    '''
+    return summation(n,identity)
+
+def sum_cubes(n):
+    '''Sum of the first N cube numbers.
+
+    >>> sum_naturals(5)
+    225
+    '''
+    return summation(n,cube)
+
+print(sum_naturals(5))
+print(sum_cubes(5))
 ```。">
 <meta property="og:title" content="cs61a learning">
 <meta property="og:description" content="# cs61a 2020 fall
@@ -90,6 +128,44 @@ Traceback (most recent call last):
     assert r > 0,'A lengath must be positive'
            ^^^^^
 AssertionError: A lengath must be positive
+```
+* 使用高阶函数来实现重复的逻辑，减少代码冗余，类似于`c++`中的模板
+```python
+def identity(k):
+    return k
+
+def cube(k):
+    return pow(k,3)
+
+def summation(n,term):
+    '''Sum the first N terms of a sequence
+    
+    >>> summation(5,cube)
+    225
+    '''
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + term(k), k + 1
+    return total
+
+def sum_naturals(n):
+    '''Sum of the first N natural numbers.
+
+    >>> sum_naturals(5)
+    15
+    '''
+    return summation(n,identity)
+
+def sum_cubes(n):
+    '''Sum of the first N cube numbers.
+
+    >>> sum_naturals(5)
+    225
+    '''
+    return summation(n,cube)
+
+print(sum_naturals(5))
+print(sum_cubes(5))
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qfpatient.github.io/post/cs61a%20learning.html">
@@ -199,7 +275,45 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
   File <span class="pl-s"><span class="pl-pds">"</span>d:\code\py\CS61A\CS61A-Assignments-main\test\7.22.py<span class="pl-pds">"</span></span>, line 17, <span class="pl-k">in</span> area_circle
     assert r <span class="pl-k">&gt;</span> 0,<span class="pl-s"><span class="pl-pds">'</span>A lengath must be positive<span class="pl-pds">'</span></span>
            ^^^^^
-AssertionError: A lengath must be positive</pre></div></div>
+AssertionError: A lengath must be positive</pre></div>
+<ul>
+<li>使用高阶函数来实现重复的逻辑，减少代码冗余，类似于<code class="notranslate">c++</code>中的模板</li>
+</ul>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">identity</span>(<span class="pl-s1">k</span>):
+    <span class="pl-k">return</span> <span class="pl-s1">k</span>
+
+<span class="pl-k">def</span> <span class="pl-en">cube</span>(<span class="pl-s1">k</span>):
+    <span class="pl-k">return</span> <span class="pl-en">pow</span>(<span class="pl-s1">k</span>,<span class="pl-c1">3</span>)
+
+<span class="pl-k">def</span> <span class="pl-en">summation</span>(<span class="pl-s1">n</span>,<span class="pl-s1">term</span>):
+    <span class="pl-s">"""Sum the first N terms of a sequence</span>
+<span class="pl-s">    </span>
+<span class="pl-s">    &gt;&gt;&gt; summation(5,cube)</span>
+<span class="pl-s">    225</span>
+<span class="pl-s">    """</span>
+    <span class="pl-s1">total</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>, <span class="pl-c1">1</span>
+    <span class="pl-k">while</span> <span class="pl-s1">k</span> <span class="pl-c1">&lt;=</span> <span class="pl-s1">n</span>:
+        <span class="pl-s1">total</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-s1">total</span> <span class="pl-c1">+</span> <span class="pl-en">term</span>(<span class="pl-s1">k</span>), <span class="pl-s1">k</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>
+    <span class="pl-k">return</span> <span class="pl-s1">total</span>
+
+<span class="pl-k">def</span> <span class="pl-en">sum_naturals</span>(<span class="pl-s1">n</span>):
+    <span class="pl-s">"""Sum of the first N natural numbers.</span>
+<span class="pl-s"></span>
+<span class="pl-s">    &gt;&gt;&gt; sum_naturals(5)</span>
+<span class="pl-s">    15</span>
+<span class="pl-s">    """</span>
+    <span class="pl-k">return</span> <span class="pl-en">summation</span>(<span class="pl-s1">n</span>,<span class="pl-s1">identity</span>)
+
+<span class="pl-k">def</span> <span class="pl-en">sum_cubes</span>(<span class="pl-s1">n</span>):
+    <span class="pl-s">"""Sum of the first N cube numbers.</span>
+<span class="pl-s"></span>
+<span class="pl-s">    &gt;&gt;&gt; sum_naturals(5)</span>
+<span class="pl-s">    225</span>
+<span class="pl-s">    """</span>
+    <span class="pl-k">return</span> <span class="pl-en">summation</span>(<span class="pl-s1">n</span>,<span class="pl-s1">cube</span>)
+
+<span class="pl-en">print</span>(<span class="pl-en">sum_naturals</span>(<span class="pl-c1">5</span>))
+<span class="pl-en">print</span>(<span class="pl-en">sum_cubes</span>(<span class="pl-c1">5</span>))</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

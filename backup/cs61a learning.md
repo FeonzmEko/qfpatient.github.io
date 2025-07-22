@@ -38,3 +38,41 @@ Traceback (most recent call last):
            ^^^^^
 AssertionError: A lengath must be positive
 ```
+* 使用高阶函数来实现重复的逻辑，减少代码冗余，类似于`c++`中的模板
+```python
+def identity(k):
+    return k
+
+def cube(k):
+    return pow(k,3)
+
+def summation(n,term):
+    """Sum the first N terms of a sequence
+    
+    >>> summation(5,cube)
+    225
+    """
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + term(k), k + 1
+    return total
+
+def sum_naturals(n):
+    """Sum of the first N natural numbers.
+
+    >>> sum_naturals(5)
+    15
+    """
+    return summation(n,identity)
+
+def sum_cubes(n):
+    """Sum of the first N cube numbers.
+
+    >>> sum_naturals(5)
+    225
+    """
+    return summation(n,cube)
+
+print(sum_naturals(5))
+print(sum_cubes(5))
+```
