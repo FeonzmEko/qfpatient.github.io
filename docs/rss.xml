@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>patient's blog</title><link>https://qfpatient.github.io</link><description>This blog is to record something.</description><copyright>patient's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110146551?v=4</url><title>avatar</title><link>https://qfpatient.github.io</link></image><lastBuildDate>Fri, 08 Aug 2025 02:28:26 +0000</lastBuildDate><managingEditor>patient's blog</managingEditor><ttl>60</ttl><webMaster>patient's blog</webMaster><item><title>Java-对象</title><link>https://qfpatient.github.io/post/Java--dui-xiang.html</link><description># 继承-Inheritance
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>patient's blog</title><link>https://qfpatient.github.io</link><description>This blog is to record something.</description><copyright>patient's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110146551?v=4</url><title>avatar</title><link>https://qfpatient.github.io</link></image><lastBuildDate>Fri, 08 Aug 2025 02:29:03 +0000</lastBuildDate><managingEditor>patient's blog</managingEditor><ttl>60</ttl><webMaster>patient's blog</webMaster><item><title>Java-泛型</title><link>https://qfpatient.github.io/post/Java--fan-xing.html</link><description># 泛型概述
+
+## 基本知识
+
+泛型：是`JDK5`中引入的特性，可以在编译阶段约束操作的数据类型，并进行检查。</description><guid isPermaLink="true">https://qfpatient.github.io/post/Java--fan-xing.html</guid><pubDate>Fri, 08 Aug 2025 02:28:36 +0000</pubDate></item><item><title>Java-对象</title><link>https://qfpatient.github.io/post/Java--dui-xiang.html</link><description># 继承-Inheritance
 
 1. 所谓继承，便是子类去继承父类的方法，省去重复代码编写，提高代码质量
 2. 重写
