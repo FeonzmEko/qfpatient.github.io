@@ -1,5 +1,139 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>patient's blog</title><link>https://qfpatient.github.io</link><description>This blog is to record something.</description><copyright>patient's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110146551?v=4</url><title>avatar</title><link>https://qfpatient.github.io</link></image><lastBuildDate>Tue, 22 Jul 2025 04:14:09 +0000</lastBuildDate><managingEditor>patient's blog</managingEditor><ttl>60</ttl><webMaster>patient's blog</webMaster><item><title>cs61a learning</title><link>https://qfpatient.github.io/post/cs61a%20learning.html</link><description># cs61a 2020 fall
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>patient's blog</title><link>https://qfpatient.github.io</link><description>This blog is to record something.</description><copyright>patient's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/110146551?v=4</url><title>avatar</title><link>https://qfpatient.github.io</link></image><lastBuildDate>Fri, 08 Aug 2025 02:06:41 +0000</lastBuildDate><managingEditor>patient's blog</managingEditor><ttl>60</ttl><webMaster>patient's blog</webMaster><item><title>Java</title><link>https://qfpatient.github.io/post/Java.html</link><description># 继承-Inheritance
+
+1. 所谓继承，便是子类去继承父类的方法，省去重复代码编写，提高代码质量
+2. 重写
+   * 重写方法名称，形参列表必须与父类保持一致
+   * 重写时，访问权限子类必须大于等于父类
+   * 重写时，返回值类型小于等于父类
+   * 建议：重写的方法尽量和父类保持一致
+   * 只有被添加到虚方法表中的方法才能被重写
+
+# 子类调用父类构造
+
+使用关键字`super`来调用父类的构造函数来进行构造
+
+```java
+public class Father{
+    String name;
+    int age;
+    public Father(){}
+    public Father(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+```java
+public class Son extends Father{
+    public Son(){
+        super(); // 调用父类无参构造
+    }
+    public Son(String name,int age){
+        super(name,age);
+    }
+}
+```
+
+# 多态-Polymorphism
+
+1. 什么是多态？
+
+   同类型的对象，表现出的不同形态
+
+2. 多态的表现形式
+
+   ```java
+   Father f = new Son();
+   ```
+
+3. 多态的前提
+
+   * 有继承关系
+   * 有父类引用指向子类对象
+   * 有方法重写
+
+4. 多态调用成员的特点
+
+   * 变量调用：编译看左边，运行也看左边
+   * 方法调用：编译看左边，运行看右边
+
+   ```java
+   package demo2;
+   
+   public class Test {
+       public static void main(String[] args) {
+           // 创建对象：多态方式
+           // Fu f = new Zi();
+           Animal a = new Dog();
+           // 变量调用：编译看左边，运行也看左边
+           // 编译看左边：javac编译代码时，会看左边父类有没有这个变量，有则编译成功，否则失败
+           // 运行也看左边：java运行代码时，获取左边父类变量的值
+           System.out.println(a.name);
+   
+           // 方法调用：编译看左边，运行看右边
+           a.show();
+       }
+   }
+   
+   class Animal{
+       String name = 'Animal';
+   
+       public void show(){
+           System.out.println('Animal --- show方法');
+       }
+   }
+   
+   class Dog extends Animal{
+       String name = 'Dog';
+   
+       @Override
+       public void show(){
+           System.out.println('Dog --- show方法');
+       }
+   }
+   
+   class Cat extends Animal{
+       String name = 'Cat';
+   
+       @Override
+       public void show(){
+           System.out.println('Cat --- show方法');
+       }
+   }
+   ```
+
+5. 多态的优势：在方法中，使用父类型作为参数，可以接受所有子类对象
+
+6. 多态的弊端：不能使用子类的特有方法
+
+   ```java
+   Fu f = new Zi();
+   f.method(); // method()是子类Zi的特有方法，而多态是基于override即方法重写，所以会报错
+   
+   // 解决方案：
+   if(a instanceof Zi1){
+       Zi1 d = (Zi1)a;
+       d.method();
+   }else if(a instanceof Zi2){
+       Zi2 d = (Zi2)a;
+       d.method();
+   }
+   
+   // java14 新特性
+   if(a instanceof Zi1 d){
+       d.method1();
+   }else if(a instanceof d){
+       d.method2();
+   }
+   ```
+
+# 包和final
+
+## 包
+
+包就是文件夹。</description><guid isPermaLink="true">https://qfpatient.github.io/post/Java.html</guid><pubDate>Fri, 08 Aug 2025 02:06:11 +0000</pubDate></item><item><title>cs61a learning</title><link>https://qfpatient.github.io/post/cs61a%20learning.html</link><description># cs61a 2020 fall
 ### 2025/7/21: 
 * 学习了`func` 和 `control`
 
