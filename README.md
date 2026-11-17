@@ -1,6 +1,6 @@
-# patient's blog :link: https://patient.qzz.io 
-### :page_facing_up: [3](https://qfpatient.github.io/tag.html) 
+# patient's blog :link: https://FeonzmEko.github.io/qfpatient.github.io 
+### :page_facing_up: [0](https://FeonzmEko.github.io/qfpatient.github.io/tag.html) 
 ### :speech_balloon: 0 
-### :hibiscus: 8653 
-### :alarm_clock: 2025-08-08 10:29:03 
+### :hibiscus: 0 
+### :alarm_clock: 2026-11-18 01:12:41 
 ### Powered by :heart: [Gmeek](https://github.com/Meekdai/Gmeek)
