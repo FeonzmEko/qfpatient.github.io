@@ -2,5 +2,7 @@
     "title":"patient's blog",
     "subTitle":"This blog is to record something.",
     "avatarUrl":"https://avatars.githubusercontent.com/u/110146551?v=4",
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
+    "showPostSource":0,
+    "homeUrl":"https://patient.qzz.io"
 }
